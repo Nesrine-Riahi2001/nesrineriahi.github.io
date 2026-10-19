@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nesrine Riahi | Cybersécurité, GRC & IAM</title>
+<meta name="description" content="Portfolio de Nesrine Riahi, étudiante ingénieure en cybersécurité : GRC, IAM, SOC, DevSecOps. Recherche un PFE de 6 mois dès janvier 2027.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0d0b0e;--bg2:#17121a;--card:#1e1722;--ink:#fbeff5;--mute:#b9a4b2;--pink:#ff5fa8;--pink2:#ff9fcb;--soft:rgba(255,95,168,.14);--line:rgba(255,95,168,.35);--onpink:#0d0b0e;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:dark}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#fff3f8;--bg2:#ffe3ef;--card:#fff;--ink:#1a1118;--mute:#6b5460;--pink:#e0287f;--pink2:#c21866;--soft:rgba(224,40,127,.1);--line:rgba(224,40,127,.35);--onpink:#fff;color-scheme:light}}
+:root[data-theme="light"]{--bg:#fff3f8;--bg2:#ffe3ef;--card:#fff;--ink:#1a1118;--mute:#6b5460;--pink:#e0287f;--pink2:#c21866;--soft:rgba(224,40,127,.1);--line:rgba(224,40,127,.35);--onpink:#fff;color-scheme:light}
+:root[data-theme="dark"]{--bg:#0d0b0e;--bg2:#17121a;--card:#1e1722;--ink:#fbeff5;--mute:#b9a4b2;--pink:#ff5fa8;--pink2:#ff9fcb;--soft:rgba(255,95,168,.14);--line:rgba(255,95,168,.35);--onpink:#0d0b0e;color-scheme:dark}
+html{scroll-behavior:smooth;scroll-padding-top:calc(80px + env(safe-area-inset-top,0px))}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.65 'DM Sans',system-ui,sans-serif;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:60}
+h1,h2,h3,.logo{font-family:'Space Grotesk','Helvetica Neue',Arial,sans-serif;letter-spacing:-.025em;line-height:1.1;margin:0}
+a{color:var(--pink)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.section{padding:72px 0 8px}
+h2{font-size:clamp(1.7rem,4vw,2.3rem);margin-bottom:8px}
+h2::after{content:"";display:block;width:56px;height:4px;background:var(--pink);margin-top:12px}
+.sub{color:var(--mute);margin:0 0 28px;max-width:62ch}
+/* nav */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;gap:12px;height:62px}
+.logo{position:relative;text-decoration:none;color:var(--onpink);background:var(--pink);width:42px;height:36px;border-radius:12px;display:grid;place-items:center;font-weight:700;margin-top:6px}
+.logo::before,.logo::after{content:"";position:absolute;top:-9px;border:8px solid transparent;border-bottom:12px solid var(--pink)}
+.logo::before{left:2px;transform:rotate(-12deg)}.logo::after{right:2px;transform:rotate(12deg)}
+nav{display:flex;align-items:center;gap:4px;overflow-x:auto;scrollbar-width:none}
+nav a{color:var(--ink);text-decoration:none;padding:8px 12px;border-radius:999px;font-size:.92rem;white-space:nowrap}
+nav a:hover{background:var(--soft)}
+nav .cta{background:var(--pink);color:var(--onpink);font-weight:700}
+#theme{background:none;border:1px solid var(--line);color:var(--ink);border-radius:999px;width:36px;height:36px;cursor:pointer;flex:none}
+/* hero */
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:56px 20px 24px}
+.status{font-family:'JetBrains Mono',ui-monospace,monospace;display:inline-flex;gap:8px;align-items:center;background:var(--soft);border:1px solid var(--line);padding:6px 14px;border-radius:999px;font-size:.88rem;margin:0 0 18px}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--pink);box-shadow:0 0 0 4px var(--soft)}
+h1{font-size:clamp(2.4rem,7vw,4.2rem)}
+h1 span{color:var(--pink)}
+.lead{font-size:1.15rem;color:var(--mute);max-width:52ch;margin:16px 0 24px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:12px 22px;border-radius:999px;text-decoration:none;font-weight:700;border:2px solid var(--pink)}
+.btn.pri{background:var(--pink);color:var(--onpink)}
+.btn:hover{transform:translateY(-2px)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.chip{background:var(--card);border:1px solid var(--line);padding:5px 14px;border-radius:999px;font-size:.85rem;text-decoration:none;color:var(--ink)}
+/* drawing slots */
+.slot{position:relative;margin:0;border:3px dashed var(--pink);border-radius:28px;background:var(--soft);display:grid;place-items:center;text-align:center;aspect-ratio:1/1;cursor:pointer;overflow:hidden;color:var(--pink);padding:16px}
+.slot.wide{aspect-ratio:4/3}
+.slot:hover{background:var(--line)}
+.slot svg{width:64px;height:64px}
+.slot b{display:block;font-family:'Space Grotesk',sans-serif;font-size:1.05rem}
+.slot small{color:var(--mute);display:block}
+.slot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ears{position:relative;margin-top:26px}
+.ears::before,.ears::after{content:"";position:absolute;top:-26px;border:26px solid transparent;border-bottom:40px solid var(--pink);z-index:1}
+.ears::before{left:34px;transform:rotate(-10deg)}.ears::after{right:34px;transform:rotate(10deg)}
+/* cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px;transition:.2s}
+.card:hover{transform:translate(-3px,-3px);box-shadow:6px 6px 0 var(--pink)}
+.card h3{font-size:1.2rem;margin-bottom:6px;color:var(--pink)}
+.card p{margin:0;color:var(--mute);font-size:.95rem}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0 0;padding:0;list-style:none}
+.tags li{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:.74rem;background:var(--soft);color:var(--ink);padding:3px 10px;border-radius:999px}
+.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:36px;align-items:center}
+.about p{margin:0 0 14px}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-top:18px}
+.fact{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:14px;text-align:center}
+.fact b{display:block;font:700 1.7rem 'Space Grotesk',sans-serif;color:var(--pink)}
+.fact span{font-size:.82rem;color:var(--mute)}
+/* projects */
+details.proj{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 22px;margin-bottom:14px}
+details.proj summary{cursor:pointer;font:600 1.15rem 'Space Grotesk',sans-serif;list-style:none;display:flex;justify-content:space-between;gap:12px;align-items:center}
+details.proj summary::-webkit-details-marker{display:none}
+details.proj summary::after{content:"＋";color:var(--pink)}
+details.proj[open] summary::after{content:"－"}
+details.proj ul{padding-left:0;list-style:none;color:var(--mute);margin:14px 0 0}
+details.proj li{padding-left:26px;position:relative;margin-bottom:8px}
+details.proj li::before{content:"▸";color:var(--pink);position:absolute;left:4px;top:0}
+.proj-d{color:var(--mute);margin:10px 0 0;font-size:.95rem}
+/* timeline */
+.tl{border-left:3px dotted var(--pink);margin-left:8px;padding-left:24px}
+.tl-i{position:relative;margin-bottom:26px}
+.tl-i::before{content:"";position:absolute;left:-34px;top:6px;width:16px;height:16px;border-radius:50%;background:var(--pink);border:3px solid var(--bg)}
+.tl-i h3{font-size:1.1rem}
+.tl-i time{font-family:'JetBrains Mono',ui-monospace,monospace;color:var(--pink);font-size:.8rem;font-weight:500}
+.tl-i p{margin:4px 0 0;color:var(--mute);font-size:.94rem}
+/* certs & contact */
+.certs{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+.certs li{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 16px}
+.certs b{display:block}.certs span{font-size:.85rem;color:var(--mute)}
+.ok{border-color:var(--pink)!important}
+.contact-grid a,.contact-grid div{display:block;text-decoration:none;color:var(--ink);height:100%}
+.contact-grid span{display:block;font-size:.8rem;color:var(--pink);font-weight:700;text-transform:uppercase;letter-spacing:.05em}
+.contact-grid b{word-break:break-word}
+.foot{text-align:center;color:var(--mute);padding:48px 20px 28px;font-size:.9rem}
+.sw{overflow-x:auto}
+@media (max-width:820px){.hero,.about{grid-template-columns:1fr}.hero .slot{max-width:360px;margin:0 auto}.nav-in nav a:not(.cta){padding:8px 9px}}
+.hero{position:relative}
+.glow{position:fixed;width:46vmax;height:46vmax;border-radius:50%;filter:blur(90px);opacity:.28;z-index:-1;pointer-events:none;background:var(--pink);animation:drift 18s ease-in-out infinite alternate}
+.g1{top:-15vmax;left:-12vmax}.g2{bottom:-18vmax;right:-14vmax;background:var(--pink2);animation-duration:24s}
+@keyframes drift{to{transform:translate(8vmax,6vmax) scale(1.15)}}
+h1 span{color:var(--pink);background:linear-gradient(90deg,var(--pink),var(--pink2),var(--pink));background-size:200% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:shine 4s linear infinite}
+@keyframes shine{to{background-position:200% 0}}
+.role{font:500 1.05rem 'JetBrains Mono',ui-monospace,monospace;color:var(--pink);margin:14px 0 0}
+.cur{display:inline-block;width:9px;height:1.1em;background:var(--pink);vertical-align:text-bottom;margin-left:4px;animation:blink 1s steps(2) infinite}
+@keyframes blink{50%{opacity:0}}
+.hero .slot{animation:float 5s ease-in-out infinite,pulse 3s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-12px) rotate(1.5deg)}}
+@keyframes pulse{0%,100%{box-shadow:0 0 18px var(--line)}50%{box-shadow:0 0 44px var(--pink)}}
+.sp{position:absolute;color:var(--pink);font-style:normal;animation:tw 2.4s ease-in-out infinite;pointer-events:none}
+.sp.s1{top:8%;right:4%;font-size:30px}.sp.s2{bottom:6%;right:44%;font-size:20px;animation-delay:.8s}.sp.s3{top:2%;left:46%;font-size:16px;animation-delay:1.5s}
+@keyframes tw{0%,100%{opacity:.2;transform:scale(.6) rotate(0)}50%{opacity:1;transform:scale(1.2) rotate(45deg)}}
+.mq{overflow:hidden;background:var(--pink);color:var(--onpink);transform:rotate(-1.4deg);margin:60px -12px 0;padding:11px 0;font:700 .95rem 'JetBrains Mono',ui-monospace,monospace;white-space:nowrap;letter-spacing:.06em;text-transform:uppercase}
+.mq div{display:inline-block;animation:mq 28s linear infinite}
+.mq:hover div{animation-play-state:paused}
+@keyframes mq{to{transform:translateX(-50%)}}
+.btn{box-shadow:4px 4px 0 var(--pink2)}
+.btn:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--pink2)}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .6s ease,transform .6s ease}
+.rv.in{opacity:1;transform:none}
+.trail{position:fixed;pointer-events:none;color:var(--pink);font-size:14px;z-index:70;transform:translate(-50%,-50%);animation:fall .8s ease-out forwards}
+@keyframes fall{to{opacity:0;transform:translate(-50%,12px) scale(.2) rotate(90deg)}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+ 
+/* compétences */
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}
+.skills .card h3{display:flex;align-items:center;gap:10px}
+.skills .card h3 i{font-style:normal;font-size:1.3rem}
+.lbl{font:700 .72rem 'JetBrains Mono',ui-monospace,monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--pink);margin:16px 0 0}
+.tags.tools li{background:transparent;border:1px solid var(--line)}
+.tags.tools li:hover,.tags li:hover{background:var(--pink);color:var(--onpink)}
+.card.wide{grid-column:1/-1}
+/* certifs */
+.cert-grp{font:700 .8rem 'JetBrains Mono',ui-monospace,monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);margin:26px 0 12px}
+.badge{float:right;font:700 .68rem 'JetBrains Mono',ui-monospace,monospace;padding:3px 10px;border-radius:999px;background:var(--soft);border:1px solid var(--line);color:var(--ink)}
+.badge.done{background:var(--pink);color:var(--onpink);border-color:var(--pink)}
+.lang{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.scale{display:flex;gap:4px}.scale i{width:18px;height:8px;border-radius:4px;background:var(--soft);border:1px solid var(--line)}
+.scale i.on{background:var(--pink);border-color:var(--pink)}
+/* contact */
+.contact-hero{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:26px;margin-bottom:18px;display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:space-between}
+.contact-hero p{margin:0;max-width:52ch}.contact-hero b{font-family:'Space Grotesk',sans-serif;font-size:1.25rem;display:block;margin-bottom:4px}
+.contact-grid li:hover{border-color:var(--pink);transform:translate(-3px,-3px);box-shadow:6px 6px 0 var(--pink)}
+.contact-grid li{transition:.2s}
+#copy.ok2{background:var(--pink2)}
+
+.photo{position:relative;margin:26px 0 0;border:3px solid var(--pink);border-radius:28px;aspect-ratio:1/1;background:var(--soft);animation:float 5s ease-in-out infinite,pulse 3s ease-in-out infinite}
+.photo img{display:block;width:100%;height:100%;object-fit:cover;border-radius:25px}
+@media (max-width:820px){.hero .photo{max-width:360px;margin:26px auto 0}}
+
+.slot{cursor:default}.slot:hover{background:var(--soft)}
+.atelier-one{max-width:560px;margin:0 auto}
+.neon-fig{position:relative;isolation:isolate;margin:0 auto 56px;max-width:720px;text-align:center}
+.neon-fig img{display:block;width:100%;height:auto;max-height:640px;object-fit:contain;margin:0 auto;border:0;background:none;
+  -webkit-mask-image:linear-gradient(to bottom,#000 78%,transparent 100%);mask-image:linear-gradient(to bottom,#000 78%,transparent 100%)}
+/* halo rose qui monte du bas */
+.neon-fig::before{content:"";position:absolute;left:50%;bottom:-50px;width:120%;height:60%;transform:translateX(-50%);z-index:-1;
+  background:radial-gradient(ellipse at 50% 100%,var(--pink) 0%,rgba(255,95,168,.45) 35%,transparent 70%);filter:blur(36px);opacity:.9}
+/* trait néon */
+.neon-fig::after{content:"";position:absolute;left:12%;right:12%;bottom:-8px;height:3px;border-radius:3px;background:var(--pink2);
+  box-shadow:0 0 10px var(--pink),0 0 28px var(--pink),0 0 64px var(--pink)}
+</style>
+</head>
+<body>
+<div class="glow g1" aria-hidden="true"></div><div class="glow g2" aria-hidden="true"></div>
+<header class="nav"><div class="wrap nav-in">
+  <a class="logo" href="#accueil" aria-label="Accueil">NR</a>
+  <nav aria-label="Navigation principale">
+    <a href="#apropos">À propos</a><a href="#competences">Compétences</a><a href="#projets">Projets</a><a href="#atelier">Atelier</a><a href="#parcours">Parcours</a><a href="#certifications">Certifs</a><a class="cta" href="#contact">Contact</a>
+  </nav>
+  <button id="theme" type="button" aria-label="Changer de thème">🌗</button>
+</div></header>
+
+<main>
+<section class="hero wrap" id="accueil">
+  <i class="sp s1" aria-hidden="true">✦</i><i class="sp s2" aria-hidden="true">✦</i><i class="sp s3" aria-hidden="true">✦</i>
+  <div>
+    <p class="status"><span class="dot"></span>Disponible pour un PFE de 6 mois dès janvier 2027</p>
+    <h1>Nesrine <span>Riahi</span></h1>
+    <p class="role" aria-label="GRC, IAM, SOC, DevSecOps">&gt; <span id="rot"></span><i class="cur"></i></p>
+    <p class="lead">Étudiante ingénieure en cybersécurité (ESPRIT), spécialisée en IAM, SOC et DevSecOps, avec une ouverture vers la GRC. Curieuse comme un chat, rigoureuse comme un audit, et artiste à mes heures.</p>
+    <div class="btns"><a class="btn pri" href="#projets">Voir mes projets</a><a class="btn" href="#contact">Me contacter</a></div>
+    <div class="chips"><a class="chip" href="#competences">GRC</a><a class="chip" href="#competences">IAM / Entra ID</a><a class="chip" href="#competences">SOC / SIEM</a><a class="chip" href="#competences">DevSecOps</a></div>
+  </div>
+  <figure class="photo ears"><img src="me.png" alt="Portrait de Nesrine Riahi" width="100" height="100" fetchpriority="high"></figure>
+</section>
+
+<div class="mq" aria-hidden="true"><div> IAM ✦ SOC ✦ DevSecOps ✦ ISO 27001 ✦ GRC  ✦ HIPAA ✦ Entra ID ✦ Wazuh ✦ Zero Trust ✦ Pink Team ✦ GRC ✦ IAM ✦ SOC ✦ DevSecOps ✦ ISO 27001 ✦ HIPAA ✦ Entra ID ✦ Wazuh ✦ Zero Trust ✦ Pink Team ✦ </div></div>
+
+<section class="wrap section" id="apropos">
+  <h2>À propos</h2>
+  <div class="about">
+    <figure class="slot wide ears" data-alt="Dessin 2"><div><svg viewBox="0 0 64 64" fill="currentColor" aria-hidden="true"><path d="M10 8l14 12h16L54 8v24c0 14-9 24-22 24S10 46 10 32z"/></svg><b>persona2.png</b><small>Ton dessin n°2 ira ici</small></div><img src="persona2.png" alt="Dessin de Nesrine, persona au travail" loading="lazy" onerror="this.remove()"></figure>
+    <div>
+     <p>Étudiante ingénieure en sécurité des réseaux et des données à ESPRIT, je recherche un stage PFE de 6 mois dès janvier 2027 en IAM, SOC/SIEM ou DevSecOps, avec une ouverture vers la gouvernance et la conformité. J’ai administré des identités avec Microsoft Entra ID, configuré Intune et Microsoft Defender, et conçu une application de planification de plus de 500 soutenances par semaine avec authentification unifiée et MFA.</p>
+     <p>J’ai déployé un SOC sous Wazuh avec trois playbooks de réponse à incident automatisés (temps de traitement réduit d’environ 37 %), construit une chaîne DevSecOps sur GitLab CI et réalisé un audit de sécurité HIPAA de 15 constats avec registre des risques. Mes projets récents incluent la mise en œuvre d’un SMSI ISO 27001 sur un cas pédagogique.</p>
+      <p>Quand je ne sécurise pas des systèmes, je fais du storyboard et de l’animation, en freelance et pour ma chaîne YouTube.</p>
+      <div class="facts">
+        <div class="fact"><b>15</b><span>constats d’audit rédigés</span></div>
+        <div class="fact"><b>~10 000</b><span>comptes Entra ID au sein du tenant ESPRIT</span></div>
+        <div class="fact"><b>-37 %</b><span>temps de traitement d’incident</span></div>
+        <div class="fact"><b>13 h</b><span>d’envoi manuel économisées</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap section" id="competences">
+  <h2>Compétences</h2>
+  <p class="sub">Du pilotage des risques au code : six domaines que j’ai pratiqués en projet, en stage ou en labo.</p>
+  <div class="skills">
+
+    <article class="card">
+      <h3><i>🛡️</i>SOC / Blue Team</h3>
+      <p>Détecter, corréler et répondre, de la collecte de logs à l’automatisation.</p>
+      <p class="lbl">Savoir-faire</p>
+      <ul class="tags"><li>Déploiement de SOC</li><li>Supervision en temps réel</li><li>Détection d’intrusion (IDS/IPS)</li><li>Alertes automatiques</li><li>Réponse aux incidents &amp; SOAR</li><li>Dashboards de supervision</li><li>Analyse des menaces</li><li>MITRE ATT&amp;CK</li></ul>
+      <p class="lbl">Outils</p>
+      <ul class="tags tools"><li>Wazuh</li><li>Suricata</li><li>Shuffle</li><li>TheHive</li><li>Cortex</li><li>MISP</li><li>VirusTotal</li><li>Elastic / Kibana</li><li>Grafana</li><li>Prometheus</li></ul>
+    </article>
+
+    <article class="card">
+      <h3><i>🔑</i>Identités &amp; Microsoft</h3>
+      <p>Gestion centralisée des identités, des accès et des terminaux.</p>
+      <p class="lbl">Savoir-faire</p>
+      <ul class="tags"><li>SSO / MFA</li><li>OAuth / SAML / OIDC</li><li>Provisioning (arrivées, mobilités, départs)</li><li>Administration par niveaux</li><li>Sécurité des endpoints</li><li>Conformité Microsoft 365</li></ul>
+      <p class="lbl">Outils</p>
+      <ul class="tags tools"><li>Entra ID</li><li>Active Directory</li><li>Keycloak</li><li>midPoint</li><li>PingCastle</li><li>Intune</li><li>Defender</li><li>Microsoft Graph API</li><li>Azure</li></ul>
+    </article>
+
+    <article class="card">
+      <h3><i>📋</i>Gouvernance, risques &amp; conformité</h3>
+      <p>Évaluer, documenter et prioriser pour rendre la sécurité mesurable.</p>
+      <p class="lbl">Savoir-faire</p>
+      <ul class="tags"><li>Analyse de risques</li><li>Registre des risques</li><li>Audit de sécurité</li><li>Rapport de constats</li><li>Cartographie de conformité</li><li>Recommandations priorisées</li></ul>
+      <p class="lbl">Référentiels</p>
+      <ul class="tags tools"><li>ISO 27001</li><li>HIPAA</li></ul>
+    </article>
+
+    <article class="card">
+      <h3><i>🌐</i>Réseaux &amp; infrastructure</h3>
+      <p>Comprendre ce qui circule, filtrer, bloquer et superviser.</p>
+      <p class="lbl">Savoir-faire</p>
+      <ul class="tags"><li>Analyse de trafic réseau</li><li>IP/MPLS</li><li>Routage OSPF &amp; BGP</li><li>Pare-feu</li><li>ACL</li><li>Blocage automatique d’IP</li><li>Détection d’attaques réseau</li><li>Protocoles 5G</li></ul>
+      <p class="lbl">Outils</p>
+      <ul class="tags tools"><li>pfSense</li><li>Wireshark</li><li>Nmap</li><li>Syslog</li><li>VMware</li><li>Azure VNet / VPN</li></ul>
+    </article>
+
+    <article class="card">
+      <h3><i>⚙️</i>DevSecOps</h3>
+      <p>Intégrer la sécurité à chaque étape, du commit au déploiement.</p>
+      <p class="lbl">Savoir-faire</p>
+      <ul class="tags"><li>Pipelines CI/CD sécurisés</li><li>Analyse statique (SAST)</li><li>Analyse des dépendances</li><li>Scan d’images conteneurs</li><li>DAST</li><li>SBOM</li><li>Détection de secrets</li><li>Gestion des artefacts</li></ul>
+      <p class="lbl">Outils</p>
+      <ul class="tags tools"><li>GitLab CI</li><li>Jenkins</li><li>Maven</li><li>SonarQube</li><li>OWASP Dependency-Check</li><li>OWASP ZAP</li><li>Trivy</li><li>Gitleaks</li><li>Semgrep</li><li>Docker</li><li>Git / GitHub</li></ul>
+    </article>
+
+    <article class="card">
+      <h3><i>💻</i>Développement</h3>
+      <p>Du fullstack aux scripts d’automatisation.</p>
+      <p class="lbl">Langages &amp; frameworks</p>
+      <ul class="tags tools"><li>Python</li><li>Django</li><li>Flask</li><li>React</li><li>TypeScript</li><li>Java</li><li>Spring Boot</li><li>Symfony</li><li>PostgreSQL</li><li>API REST</li><li>Bash</li><li>PowerShell</li><li>Linux</li></ul>
+    </article>
+
+    <article class="card wide">
+      <h3><i>🤝</i>Soft skills</h3>
+      <ul class="tags"><li>Travail en équipe</li><li>Communication</li><li>Leadership</li><li>Autonomie</li><li>Esprit d’analyse et de synthèse</li><li>Créativité (storyboard &amp; animation)</li></ul>
+    </article>
+  </div>
+</section>
+
+<section class="wrap section" id="projets">
+  <h2>Projets</h2>
+  <p class="sub">Clique sur un projet pour voir les détails.</p>
+
+  <details class="proj" open><summary>MediShield : SOC en contexte de santé</summary>
+    <p class="proj-d">Nov. 2025 – mai 2026. Détecter, analyser et traiter automatiquement les incidents, avec audit final de conformité HIPAA.</p>
+    <ul>
+      <li>Architecture et déploiement de la chaîne complète : collecte et corrélation, gestion d’incidents, enrichissement des alertes, partage de renseignements sur les menaces.</li>
+      <li>Administration de Wazuh et déploiement d’agents EDR sur postes Linux et Windows.</li>
+      <li>Règles de détection personnalisées (décodeurs et règles) pour réduire les faux positifs.</li>
+      <li>3 playbooks de réponse à incident automatisés : de 16 à 10 secondes par incident, soit environ 37 % de gain.</li>
+    </ul>
+    <ul class="tags"><li>Wazuh</li><li>Elastic / Kibana</li><li>Shuffle</li><li>TheHive</li><li>Cortex</li><li>MISP</li></ul>
+  </details>
+
+  <details class="proj"><summary>Audit de sécurité du SOC &amp; conformité HIPAA</summary>
+    <p class="proj-d">Évaluer la posture de sécurité de la plateforme, estimer les risques et vérifier l’alignement avec HIPAA.</p>
+    <ul>
+      <li>Scans de découverte avec Nmap, vérification du pare-feu et test par simulation d’attaque brute force SSH.</li>
+      <li>Rapport de 15 constats, chacun avec preuve, criticité et impact.</li>
+      <li>Registre des risques (probabilité × impact) et cartographie de conformité HIPAA.</li>
+      <li>Recommandations priorisées selon la criticité.</li>
+    </ul>
+    <ul class="tags"><li>Nmap</li><li>HIPAA</li><li>Registre des risques</li><li>Audit</li></ul>
+  </details>
+
+  <details class="proj"><summary>IAM pour un environnement hospitalier</summary>
+    <p class="proj-d">2026. Active Directory, Keycloak, midPoint et PingCastle.</p>
+    <ul>
+      <li>Active Directory : 10 OU, 14 groupes, 7 GPO, administration par niveaux, contrôle d’accès par rôles pensé pour HIPAA.</li>
+      <li>Keycloak (SSO, OIDC/SAML, MFA) fédéré à l’AD et midPoint pour automatiser arrivées, mobilités et départs.</li>
+      <li>Analyse de la sécurité de l’AD avec PingCastle.</li>
+    </ul>
+    <ul class="tags"><li>Active Directory</li><li>Keycloak</li><li>midPoint</li><li>PingCastle</li></ul>
+  </details>
+
+  <details class="proj"><summary>Chaîne DevSecOps sur GitLab CI</summary>
+    <p class="proj-d">2026. Sécuriser une application Flask volontairement vulnérable, du commit au déploiement.</p>
+    <ul>
+      <li>Pipeline CI/CD : secrets exposés, SAST, qualité du code, vulnérabilités des dépendances et de l’image Docker, DAST.</li>
+      <li>SBOM généré pour la traçabilité de la chaîne d’approvisionnement.</li>
+      <li>Hook pre-commit sous Docker qui bloque les secrets avant l’envoi au dépôt.</li>
+    </ul>
+    <ul class="tags"><li>GitLab CI</li><li>Docker</li><li>Gitleaks</li><li>Semgrep</li><li>SonarQube</li><li>Trivy</li><li>CycloneDX</li><li>OWASP ZAP</li></ul>
+  <p class="proj-d"><a href="https://gitlab.com/devsecops2714740/vulnflask" target="_blank" rel="noopener">Voir le code sur GitLab</a></p>
+  </details>
+
+  <details class="proj"><summary>SIEM Home Lab : Wazuh</summary>
+    <p class="proj-d">Projet personnel reproduisant les fondamentaux d’un SOC, de la collecte de logs à la réponse automatisée.</p>
+    <ul>
+      <li>Architecture Wazuh complète (manager, indexer, dashboard) sous VMware, agents Windows et Linux.</li>
+      <li>File Integrity Monitoring en temps réel et règles personnalisées sur les logs SSH, avec détection à sévérité progressive.</li>
+      <li>Active Response (firewall-drop) validée par une simulation d’attaque SSH.</li>
+    </ul>
+    <ul class="tags"><li>Wazuh</li><li>VMware</li><li>Hydra</li><li>bash</li><li>PowerShell</li></ul>
+    <p class="proj-d"><a href="https://github.com/Nesrine-Riahi2001/security-homelab" target="_blank" rel="noopener">Voir le code sur GitHub</a></p>
+  </details>
+
+  <details class="proj"><summary>ISO 27001 – Mise en œuvre d’un SMSI pour une FinTech (cas pédagogique)</summary>
+    <p class="proj-d">Mettre en place un SMSI conforme à ISO/IEC 27001:2022 pour une société de paiement fictive, de l’analyse des écarts à la déclaration d’applicabilité. </p>
+    <ul>
+      <li>Analyse de 45 écarts avec source, preuve à demander et criticité, rapprochés des clauses 4 à 10 de la norme.</li>
+      <li>Appréciation de 12 risques (vraisemblance × impact), chaque cotation étant justifiée, avec le risque résiduel visé.</li>
+      <li>Plan de traitement de 36 actions et déclaration d’applicabilité sur les 93 contrôles de l’Annexe A (88 retenus, 5 exclus et justifiés).</li>
+      <li>Politique de contrôle d’accès et de gestion des identités (19 règles) et 10 indicateurs de suivi.</li>
+    </ul>
+    
+     <p class="proj-d"><a href="https://github.com/Nesrine-Riahi2001/security-homelab" target="_blank" rel="noopener">Voir le code sur GitHub</a></p><ul class="tags"><li>ISO 27001</li><li>Analyse de risques</li><li>SoA</li><li>Politiques de sécurité</li></ul>
+  </details>
+
+  <details class="proj"><summary>Application de gestion d’événements : Symfony &amp; JavaFX</summary>
+    <p class="proj-d">Projet d’équipe : une application web et une application desktop partageant la même base MySQL et la même logique métier.</p>
+    <ul class="tags"><li>Symfony</li><li>JavaFX</li><li>MySQL</li><li>Doctrine</li><li>Twig</li><li>MVC</li><li>Git</li></ul>
+  </details>
+</section>
+
+<section class="wrap section" id="atelier">
+  <h2>L’atelier</h2>
+  <p class="sub">Storyboard, animation et illustration : l’autre moitié de moi.</p>
+ <figure class="neon-fig " style="margin:0 auto;max-width:1000px;text-align:center"><img src="persona.png" alt="Dessin de Nesrine : mon persona" loading="lazy"></figure>
+</section>
+
+<section class="wrap section" id="parcours">
+  <h2>Parcours</h2>
+  <div class="tl">
+    <div class="tl-i"><time>Juin – août 2026</time><h3>ESPRIT : Stage ingénieur, Fullstack &amp; IAM</h3><p>Moteur de planification (OR-Tools) pour plus de 500 soutenances par semaine, trois portails (Coordinateur, Enseignant, Étudiant) avec authentification unifiée Entra ID et MFA, notifications Outlook via Microsoft Graph, CI/CD GitLab.</p></div>
+    <div class="tl-i"><time>Juil. – août 2025</time><h3>Esprit_Tech : Stage d’immersion fullstack</h3><p>Administration des identités, accessibilité (synthèse vocale, sous-titres, lecteurs d’écran) et module d’IA générative pour quiz personnalisés.</p></div>
+    <div class="tl-i"><time>Fév. – mai 2024</time><h3>RFC : PFE de licence, Administratrice sécurité Microsoft 365 &amp; endpoints</h3><p>Politiques Intune sur Android, Windows et Linux, règles Defender, Microsoft Compliance et politiques de sécurité Azure.</p></div>
+    <div class="tl-i"><time>Août 2023</time><h3>RFC : Stage, Administratrice Azure</h3><p>Infrastructure d’environ 10 machines virtuelles et 2 VNet, connexions VPN et dépannage réseau.</p></div>
+    <div class="tl-i"><time>Jan. – fév. 2022</time><h3>TAC-TIC : Stage, développeuse front-end</h3><p>Interfaces web en HTML, CSS et JavaScript, validation de formulaires et comportements dynamiques.</p></div>
+  </div>
+  <h2 style="margin-top:36px">Formation &amp; distinctions</h2>
+  <ul class="certs">
+    <li><b>Diplôme d’ingénieur en Informatique</b><span>ESPRIT, Sécurité des réseaux et des données · 2024 – 2027</span></li>
+    <li><b>Licence STIC, Réseaux &amp; Télécoms</b><span>ISET’com Tunis · Mention Bien · 2021 – 2024</span></li>
+    <li><b>1ère place, Bal des Projets</b><span>Esprit English Unit · déc. 2024 · vidéo animée pour l’ONG Tuniscom</span></li>
+    <li><b>Titre national Étudiante Entrepreneure</b><span>Université de Carthage · juin 2024</span></li>
+  </ul>
+</section>
+
+<section class="wrap section" id="certifications">
+  <h2>Certifications &amp; langues</h2>
+  <p class="sub">Deux certifications Cisco obtenues, trois autres en préparation ce semestre.</p>
+
+  <p class="cert-grp">Obtenues</p>
+  <ul class="certs">
+    <li class="ok"><span class="badge done">2026</span><b>Cisco CyberOps Associate</b><span>Opérations de sécurité, détection et réponse</span></li>
+    <li class="ok"><span class="badge done">2026</span><b>Cisco Network Security</b><span>Sécurité des réseaux</span></li>
+  </ul>
+
+  <p class="cert-grp">En préparation (semestre actuel)</p>
+  <ul class="certs">
+    <li><span class="badge">En cours</span><b>ISO 27001 Audit &amp; Management</b><span>Audit et pilotage d’un SMSI</span></li>
+    <li><span class="badge">En cours</span><b>CEH</b><span>Certified Ethical Hacker</span></li>
+    <li><span class="badge">En cours</span><b>Fortinet FortiGate Security</b><span>Pare-feu et sécurité réseau</span></li>
+  </ul>
+
+  <p class="cert-grp">Langues</p>
+  <ul class="certs">
+    <li><div class="lang"><div><b>Français</b><span>Courant · C1</span></div><div class="scale" role="img" aria-label="Niveau C1 sur 6"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div></div></li>
+    <li><div class="lang"><div><b>Anglais</b><span>Courant · C1</span></div><div class="scale" role="img" aria-label="Niveau C1 sur 6"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div></div></li>
+  </ul>
+</section>
+
+<section class="wrap section" id="contact">
+  <h2>Contact</h2>
+  <p class="sub">Un PFE de 6 mois en GRC, IAM ou SOC, dès janvier 2027 ? Parlons-en.</p>
+
+  <div class="contact-hero">
+    <p><b>Disponible dès janvier 2027</b>PFE de 6 mois en cybersécurité (GRC, IAM, SOC). Je réponds vite, de préférence par email.</p>
+    <div class="btns">
+      <a class="btn pri" href="mailto:nesrineriahi216@gmail.com?subject=Proposition%20de%20PFE%20-%20Nesrine%20Riahi">Écrire un email</a>
+      <button class="btn" id="copy" type="button" style="background:none;color:var(--ink);cursor:pointer;font:inherit;font-weight:700">Copier l’adresse</button>
+      <a class="btn" href="cv-nesrine-riahi.pdf" download>Télécharger mon CV</a>
+    </div>
+  </div>
+
+  <ul class="certs contact-grid">
+    <li><a href="mailto:nesrineriahi216@gmail.com"><span>Email</span><b>nesrineriahi216@gmail.com</b></a></li>
+    <li><a href="tel:+21650450528"><span>Téléphone</span><b>+216 50 450 528</b></a></li>
+    <li><a href="https://www.linkedin.com/in/nesrine-riahi-8a1b032a0" target="_blank" rel="noopener"><span>LinkedIn</span><b>nesrine-riahi-8a1b032a0</b></a></li>
+    <li><a href="https://github.com/Nesrine-Riahi2001" target="_blank" rel="noopener"><span>GitHub</span><b>Nesrine-Riahi2001</b></a></li>
+    <li><div><span>Localisation</span><b>Tunis, Tunisie</b></div></li>
+    <li><div><span>Recherche</span><b>PFE 6 mois · janv. 2027</b></div></li>
+  </ul>
+</section>
+</main>
+<footer class="foot">© 2026 Nesrine Riahi · fait avec beaucoup de rose et un peu de code</footer>
+
+<script>
+(function(){
+  var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var els=document.querySelectorAll('.section .card,.section .fact,.proj,.tl-i,.certs li,.section .slot');
+  if('IntersectionObserver' in window&&!rm){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var t=e.target;t.classList.add('in');io.unobserve(t);setTimeout(function(){t.classList.remove('rv','in')},900)}})},{threshold:.1});
+    els.forEach(function(el){el.classList.add('rv');io.observe(el)});
+  }
+  var w=['GRC & conformité','IAM & Entra ID','SOC & détection','DevSecOps'],rt=document.getElementById('rot'),wi=0,wj=0,wd=false;
+  function tick(){var s=w[wi];if(rm){rt.textContent=w[0];return}
+    rt.textContent=s.slice(0,wj);
+    if(!wd&&wj===s.length){wd=true;return setTimeout(tick,1400)}
+    if(wd&&wj===0){wd=false;wi=(wi+1)%w.length}
+    wj+=wd?-1:1;setTimeout(tick,wd?40:80)}
+  tick();
+  if(!rm&&matchMedia('(pointer: fine)').matches){var last=0;addEventListener('mousemove',function(e){var n=Date.now();if(n-last<70)return;last=n;var s=document.createElement('span');s.className='trail';s.textContent='✦';s.style.left=e.clientX+'px';s.style.top=e.clientY+'px';document.body.appendChild(s);setTimeout(function(){s.remove()},800)})}
+  var r=document.documentElement,b=document.getElementById('theme');
+  b.addEventListener('click',function(){
+    var dark=r.getAttribute('data-theme')?r.getAttribute('data-theme')==='dark':!matchMedia('(prefers-color-scheme: light)').matches;
+    r.setAttribute('data-theme',dark?'light':'dark');
+  });
+})();
+</script>
+<script>
+(function(){
+  var b=document.getElementById('copy');if(!b)return;
+  b.addEventListener('click',function(){
+    var t='nesrineriahi216@gmail.com';
+    function done(){b.textContent='Copié ✓';setTimeout(function(){b.textContent='Copier l’adresse'},1800)}
+    if(navigator.clipboard){navigator.clipboard.writeText(t).then(done,function(){})}
+  });
+})();
+</script>
+</body>
+</html>
